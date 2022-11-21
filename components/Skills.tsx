@@ -9,7 +9,7 @@ import vue from "./../assets/vuejs.png";
 import bootstrap from "./../assets/bootstrap-framework-logo.png";
 import python from "./../assets/python-language-logo.png";
 import cpp from "./../assets/c-language-logo.png";
-import dart from "./../assets/dart-programming-logo.png";
+import next from "./../assets/Next.js.png";
 import cc from "./../assets/cdnlogo.com_c-sharp.png";
 import jest from "./../assets/jest.png";
 import git from "./../assets/pngwing.com.png";
@@ -57,8 +57,8 @@ function Skills() {
       icon: <Image src={cc} alt="C#" className="max-w-[80px]" />,
     },
     {
-      name: "Dart",
-      icon: <Image src={dart} alt="dart" className="max-w-[80px]" />,
+      name: "Next",
+      icon: <Image src={next} alt="Next" className="max-w-[80px]" />,
     },
     {
       name: "Git",
