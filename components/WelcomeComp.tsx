@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 
 function WelcomeComp() {
   return (
-    <div className={styles.Welcome}>
+    <section className={styles.Welcome}>
       <div className="sticky top-4">
         <NavBar />
       </div>
@@ -19,11 +19,11 @@ function WelcomeComp() {
             I'am a {"<"}Front-end developer{" />"}
           </p>
         </div>
-        <div className="w-1/2">
+        <div className="w-1/2 h-full">
           <Spline scene="https://prod.spline.design/AqaVuMhQ6L8yAIkB/scene.splinecode" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
