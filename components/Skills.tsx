@@ -77,9 +77,10 @@ function Skills() {
       <div
         className={`${styles.glassEffect} grid grid-cols-6 justify-items-center justify-center gap-4 items-center w-2/3 bg-[#290e56] p-4`}
       >
-        {skills.map((sk) => {
+        {skills.map((sk, i) => {
           return (
             <div
+              key={i}
               className={`flex flex-col gap-2 justify-center items-center max-w-[150px] min-w-[150px] min-h-[150px] hover:bg-[#290e56] rounded-full transition-all duration-1000 ease-in-out group`}
             >
               <span className="group-hover:-rotate-[30deg] transition-all duration-1000 ease-in-out">

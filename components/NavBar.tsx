@@ -28,9 +28,10 @@ function NavBar() {
   return (
     <div className="bg-transparent text-white text-[24px] font-[verdana]">
       <div className="flex flex-row justify-center items-center">
-        {taps.map((tap) => {
+        {taps.map((tap, i) => {
           return (
             <Link
+              key={i}
               href={tap.link}
               className="flex flex-col justify-center items-center rounded-xl px-4 py-2"
             >
