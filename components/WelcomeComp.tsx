@@ -16,8 +16,8 @@ function WelcomeComp() {
           <p className={styles.WelcomeLine1}>
             {"{"} Abdallah Zaher {"}"}
           </p>
-          <p className={`${styles.WelcomeLine2}`}>
-            I'am a {"<"}Full-Stack developer{" />"}
+          <p className={styles.WelcomeLine2}>
+            I&apos;am a {"<"}Full-Stack developer{" />"}
           </p>
         </div>
         <div className="w-[50rem] h-[35rem]">
