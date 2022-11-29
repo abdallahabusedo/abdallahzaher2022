@@ -21,6 +21,7 @@ function WelcomeComp() {
           </p>
         </div>
         <div className="w-[50rem] h-[35rem]">
+          <Spline scene="https://prod.spline.design/AqaVuMhQ6L8yAIkB/scene.splinecode" />
         </div>
       </div>
       <ScrollDown />

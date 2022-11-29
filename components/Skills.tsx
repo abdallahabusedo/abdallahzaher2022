@@ -18,51 +18,93 @@ function Skills() {
   let skills = [
     {
       name: "HTML5",
-      icon: <Image src={html} alt="HTML5" className="max-w-[80px]" />,
+      icon: (
+        <Image src={html} alt="HTML5" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "CSS",
-      icon: <Image src={css} alt="CSS" className="max-w-[80px]" />,
+      icon: (
+        <Image src={css} alt="CSS" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "JavaScript",
-      icon: <Image src={js} alt="JavaScript" className="max-w-[80px]" />,
+      icon: (
+        <Image
+          src={js}
+          alt="JavaScript"
+          className="max-w-[80px]"
+          loading="lazy"
+        />
+      ),
     },
     {
       name: "React",
-      icon: <Image src={react} alt="React" className="max-w-[80px]" />,
+      icon: (
+        <Image
+          src={react}
+          alt="React"
+          className="max-w-[80px]"
+          loading="lazy"
+        />
+      ),
     },
     {
       name: "Vue",
-      icon: <Image src={vue} alt="Vue" className="max-w-[80px]" />,
+      icon: (
+        <Image src={vue} alt="Vue" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "Bootstrap",
-      icon: <Image src={bootstrap} alt="Bootstrap" className="max-w-[80px]" />,
+      icon: (
+        <Image
+          src={bootstrap}
+          alt="Bootstrap"
+          className="max-w-[80px]"
+          loading="lazy"
+        />
+      ),
     },
     {
       name: "Jest",
-      icon: <Image src={jest} alt="Jest" className="max-w-[80px]" />,
+      icon: (
+        <Image src={jest} alt="Jest" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "Python",
-      icon: <Image src={python} alt="Python" className="max-w-[80px]" />,
+      icon: (
+        <Image
+          src={python}
+          alt="Python"
+          className="max-w-[80px]"
+          loading="lazy"
+        />
+      ),
     },
     {
       name: "C++",
-      icon: <Image src={cpp} alt="C++" className="max-w-[80px]" />,
+      icon: (
+        <Image src={cpp} alt="C++" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "C#",
-      icon: <Image src={cc} alt="C#" className="max-w-[80px]" />,
+      icon: <Image src={cc} alt="C#" className="max-w-[80px]" loading="lazy" />,
     },
     {
       name: "Next",
-      icon: <Image src={next} alt="Next" className="max-w-[80px]" />,
+      icon: (
+        <Image src={next} alt="Next" className="max-w-[80px]" loading="lazy" />
+      ),
     },
     {
       name: "Git",
-      icon: <Image src={git} alt="git" className="max-w-[80px]" />,
+      icon: (
+        <Image src={git} alt="git" className="max-w-[80px]" loading="lazy" />
+      ),
     },
   ];
   return (
