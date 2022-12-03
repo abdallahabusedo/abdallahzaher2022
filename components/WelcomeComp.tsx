@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
-import Spline from "@splinetool/react-spline";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from '@react-three/fiber'
+
+
 import NavBar from "./NavBar";
 import ScrollDown from "./ScrollDown";
-
+import Scene from "./Room";
 function WelcomeComp() {
   return (
     <section className={styles.Welcome}>
@@ -21,6 +24,10 @@ function WelcomeComp() {
           </p>
         </div>
         <div className="w-[50rem] h-[35rem]">
+          <Canvas shadows flat linear>
+            <Scene />
+            <OrbitControls />
+          </Canvas>
         </div>
       </div>
       <ScrollDown />
