@@ -3,7 +3,7 @@ import styles from "../styles/ScrollDown.module.css";
 function ScrollDown() {
   return (
     <div className={styles.container}>
-      <a id="scroll-btn" href="#skills" className={styles.chevron}></a>
+      <a id="scroll-btn" href="/skills" className={styles.chevron}></a>
     </div>
   );
 }

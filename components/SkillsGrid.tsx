@@ -19,8 +19,9 @@ import tailwind from "./../assets/tailwind-css.png";
 import express from "./../assets/express.png";
 import node from "./../assets/nodejs.png";
 import graphql from "./../assets/graphql.png";
+import NavBar from "./NavBar";
 
-function Skills() {
+function SkillsGrid() {
   let skills = [
     {
       name: "HTML5",
@@ -100,8 +101,9 @@ function Skills() {
       id="skills"
       className={`${styles.Welcome} flex flex-col gap-8 justify-center items-center p-4`}
     >
+      <NavBar />
       <span className={`${styles.text}`}>
-        {"{"} Skills {"}"}
+        {"{"} .Skills {"}"}
       </span>
 
       <div
@@ -114,14 +116,11 @@ function Skills() {
               className={`flex flex-col gap-2 justify-center items-center max-w-[120px] min-w-[120px] min-h-[120px] hover:bg-[#290e56] rounded-full transition-all duration-1000 ease-in-out group`}
             >
               <span className="group-hover:-rotate-[30deg] transition-all duration-1000 ease-in-out">
-                <Image
-                  src={sk.icon}
-                  alt="express"
-                  className="max-w-[60px]"
-                  loading="lazy"
-                />
+                <Image src={sk.icon} alt="express" className="max-w-[60px]" />
               </span>
-              <span className="font-bold text-[#f5f5f5] ">{sk.name}</span>
+              <span className="font-bold text-[#f5f5f5] text-xs">
+                {sk.name}
+              </span>
             </div>
           );
         })}
@@ -130,4 +129,4 @@ function Skills() {
   );
 }
 
-export default Skills;
+export default SkillsGrid;

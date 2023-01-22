@@ -6,27 +6,27 @@ function NavBar() {
   let taps = [
     {
       name: "Home",
-      link: "#",
+      link: "/",
       icon: <AiFillHome />,
     },
     {
       name: "Skills",
-      link: "#skills",
+      link: "/skills",
       icon: <MdWorkspacesFilled />,
     },
     {
       name: "Projects",
-      link: "#",
+      link: "/projects",
       icon: <AiFillProject />,
     },
     {
-      name: "Contact me",
+      name: "Contact",
       link: "#",
       icon: <MdContacts />,
     },
   ];
   return (
-    <div className="bg-transparent text-white text-[24px] font-[verdana]">
+    <div className="bg-transparent text-white text-[24px] font-[verdana] h-24 flex justify-center items-center">
       <div className="flex flex-row justify-center items-center">
         {taps.map((tap, i) => {
           return (
@@ -35,8 +35,7 @@ function NavBar() {
               href={tap.link}
               className="flex flex-col justify-center items-center rounded-xl px-4 py-2"
             >
-              {tap.icon}
-              {tap.name}
+              .{tap.name}
             </Link>
           );
         })}

@@ -9,8 +9,9 @@ import html from "./../assets/html.png";
 import css from "./../assets/css3.png";
 import vue from "./../assets/vuejs.png";
 import firebase from "./../assets/firebase.png";
+import NavBar from "./NavBar";
 
-function Projects() {
+function ProjectsSlide() {
   const Projects = [
     {
       name: "Posidoon Chat",
@@ -49,8 +50,9 @@ function Projects() {
     <section
       className={`${styles.Welcome} flex flex-col gap-8 justify-center items-center p-4`}
     >
+      <NavBar />
       <span className={`${styles.text}`}>
-        {"{"} Projects {"}"}
+        {"{"} .Projects {"}"}
       </span>
       <div
         className={`${styles.glassEffect} rounded-[10px] flex justify-items-center justify-center gap-4 items-center w-2/3 bg-[#290e56]`}
@@ -102,4 +104,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default ProjectsSlide;
