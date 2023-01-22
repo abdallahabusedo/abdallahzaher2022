@@ -60,7 +60,7 @@ function ProjectsSlide() {
         <Splide>
           {Projects.map((project, i) => {
             return (
-              <SplideSlide>
+              <SplideSlide key={i}>
                 <div className="flex flex-col justify-center items-center">
                   <Image
                     src={project.image}
@@ -75,9 +75,10 @@ function ProjectsSlide() {
                       <a href={project.link}>{project.name}</a>
                     </h2>
                     <div className="flex gap-2 justify-center items-center text-white rounded-full ">
-                      {project.badges.map((bad) => {
+                      {project.badges.map((bad, y) => {
                         return (
                           <span
+                            key={y}
                             className={`${styles.glassEffect}  rounded-full  flex justify-center items-center px-2 gap-2 hover:bg-[#f8f8f823] transition-all duration-200 ease-in-out `}
                           >
                             <Image
