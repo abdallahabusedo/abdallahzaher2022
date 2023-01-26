@@ -26,7 +26,14 @@ function NavBar() {
     },
   ];
   return (
-    <div className="bg-transparent text-white lg:text-[24px]  md:text-[18px] sm:text-[12px] xs:text-[8px] font-[verdana] h-24 flex justify-center items-center ">
+    <div
+      className="bg-transparent text-white font-[verdana] h-24 flex justify-center items-center 
+    lg:text-[24px]  
+    md:text-[18px] 
+    sm:text-[12px] 
+    xs:text-[12px] 
+    "
+    >
       <div className="flex flex-row justify-center items-center lg:gap-8 md:gap-4 sm:gap-4 xs:gap-4">
         {taps.map((tap, i) => {
           return (
