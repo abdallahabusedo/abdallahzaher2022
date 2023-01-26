@@ -138,8 +138,6 @@ function SkillsGrid() {
          `}
       >
         {skills.map((sk, i) => {
-          console.log((i + 1) * 100);
-
           return (
             <div
               data-aos="fade-up"
