@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./../styles/Home.module.css";
 import Image from "next/image";
 import "@splidejs/react-splide/css/sea-green";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import NavBar from "./NavBar";
 import { ProjectsArray } from "././../objects/ProjectsArray";
 function ProjectsSlide() {
@@ -21,6 +22,9 @@ function ProjectsSlide() {
     // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground);
   });
+  React.useEffect(() => {
+    AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
+  }, []);
   return (
     <div
       className={`${styles.Welcome} flex flex-col justify-center items-center`}
@@ -39,6 +43,7 @@ function ProjectsSlide() {
         {ProjectsArray.slice(0, next).map((project: any, i: number) => {
           return (
             <div
+              data-aos={project.animation}
               key={i}
               className={`${styles.glassEffect} rounded-[10px] flex flex-col text-center justify-center items-center bg-[#290e56] w-2/3 p-8 `}
             >

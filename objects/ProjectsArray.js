@@ -52,6 +52,7 @@ export const ProjectsArray = [
         icon: firebase,
       },
     ],
+    animation: "fade-right",
   },
   {
     name: "Intella Voice",
@@ -75,6 +76,7 @@ export const ProjectsArray = [
         icon: express,
       },
     ],
+    animation: "fade-left",
   },
   {
     name: "NFT Landing Page",
@@ -89,6 +91,7 @@ export const ProjectsArray = [
       { name: "CSS", icon: css },
       { name: "typescript", icon: ts },
     ],
+    animation: "fade-up-right",
   },
   {
     name: "InstaSedo",
@@ -122,6 +125,7 @@ export const ProjectsArray = [
         icon: firebase,
       },
     ],
+    animation: "fade-up-left",
   },
   {
     name: "CalenderJs",
@@ -139,6 +143,7 @@ export const ProjectsArray = [
         icon: tailwind,
       },
     ],
+    animation: "fade-down-right",
   },
   {
     name: "Oud",
@@ -165,6 +170,7 @@ export const ProjectsArray = [
       },
       { name: "Css", icon: css },
     ],
+    animation: "fade-down-left",
   },
   {
     name: "Level up",
@@ -190,6 +196,7 @@ export const ProjectsArray = [
         icon: node,
       },
     ],
+    animation: "flip-left",
   },
   {
     name: "Pacman",
@@ -209,6 +216,7 @@ export const ProjectsArray = [
         icon: cc,
       },
     ],
+    animation: "flip-right",
   },
   {
     name: "Blog site",
@@ -230,6 +238,7 @@ export const ProjectsArray = [
         icon: mongodb,
       },
     ],
+    animation: "flip-up",
   },
   {
     name: "covid19 visualization",
@@ -243,6 +252,7 @@ export const ProjectsArray = [
         icon: vue,
       },
     ],
+    animation: "flip-down",
   },
   {
     name: "Blog site (just Back-End)",
@@ -260,5 +270,6 @@ export const ProjectsArray = [
         icon: prisma,
       },
     ],
+    animation: "zoom-in",
   },
 ];
