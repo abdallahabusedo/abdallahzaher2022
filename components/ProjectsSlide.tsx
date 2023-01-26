@@ -39,6 +39,7 @@ function ProjectsSlide() {
         {ProjectsArray.slice(0, next).map((project: any, i: number) => {
           return (
             <div
+              key={i}
               className={`${styles.glassEffect} rounded-[10px] flex flex-col text-center justify-center items-center bg-[#290e56] w-2/3 p-8 `}
             >
               <div className="flex flex-col justify-center items-center">
