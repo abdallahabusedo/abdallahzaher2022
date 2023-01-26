@@ -10,7 +10,12 @@ function WelcomeComp() {
     <section className={styles.Welcome}>
       <NavBar />
 
-      <div className="flex lg:flex-row lg:items-center lg:justify-center  md:flex-col sm:flex-col">
+      <div
+        className="flex lg:flex-row lg:items-center lg:justify-center  md:flex-col md:justify-center md:items-center
+      sm:flex-col sm:justify-center sm:items-center 
+      xs:flex-col xs:justify-center xs:items-center 
+      "
+      >
         <div className="flex flex-col items-start justify-center">
           <p className="lg:text-[30px] text-white ml-[70px] md:text-[20px]  sm:text-[10px]">
             Hi, My name is
@@ -23,7 +28,7 @@ function WelcomeComp() {
             I&apos;am a {"< "}Full-Stack developer{"  />"}
           </p>
         </div>
-        <div className="lg:w-[50rem] lg:h-[35rem] md:w-[40rem] md:h-[25rem] sm:w-[300rem] sm:h-[20rem]">
+        <div className="lg:w-[50rem] lg:h-[35rem] md:w-[30rem] md:h-[20rem] ">
           <Canvas shadows flat linear>
             <Scene />
             <OrbitControls />
