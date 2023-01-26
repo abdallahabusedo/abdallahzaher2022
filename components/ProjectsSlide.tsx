@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 import { ProjectsArray } from "././../objects/ProjectsArray";
 function ProjectsSlide() {
   const [navbar, setNavbar] = React.useState(false);
-  const [next, setNext] = React.useState(2);
+  const [next, setNext] = React.useState(5);
   //navbar scroll changeBackground function
   const changeBackground = () => {
     if (window.scrollY >= 66) {
