@@ -24,10 +24,7 @@ body::-webkit-scrollbar {
   width: 0em;
 }
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
+
 
 svg {
   overflow: visible;

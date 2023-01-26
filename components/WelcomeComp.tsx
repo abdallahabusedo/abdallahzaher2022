@@ -11,7 +11,7 @@ function WelcomeComp() {
     AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
   }, []);
   return (
-    <section className={styles.Welcome}>
+    <div className={`${styles.Welcome} h-[100vh]`}>
       <NavBar />
       <div
         data-aos="fade-up"
@@ -70,7 +70,7 @@ function WelcomeComp() {
           </Canvas>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

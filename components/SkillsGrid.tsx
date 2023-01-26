@@ -119,9 +119,9 @@ function SkillsGrid() {
     },
   ];
   return (
-    <section
+    <div
       id="skills"
-      className={`${styles.Welcome} flex flex-col items-center `}
+      className={`${styles.Welcome} h-[100vh] flex flex-col items-center  `}
     >
       <NavBar />
       <span className={`${styles.text}`}>
@@ -177,7 +177,7 @@ function SkillsGrid() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }
 
