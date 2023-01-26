@@ -2,33 +2,68 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import NavBar from "./NavBar";
 import Scene from "./Room";
 function WelcomeComp() {
+  React.useEffect(() => {
+    AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
+  }, []);
   return (
     <section className={styles.Welcome}>
       <NavBar />
-
       <div
-        className="flex lg:flex-row lg:items-center lg:justify-center  md:flex-col md:justify-center md:items-center
+        data-aos="fade-up"
+        className="flex 
+      lg:flex-row lg:items-center lg:justify-center  
+      md:flex-col md:justify-center md:items-center md:text-left
       sm:flex-col sm:justify-center sm:items-center 
-      xs:flex-col xs:justify-center xs:items-center 
+      xs:flex-col xs:justify-center xs:items-center xs:text-center
       "
       >
-        <div className="flex flex-col items-start justify-center">
-          <p className="lg:text-[30px] text-white ml-[70px] md:text-[20px]  sm:text-[10px]">
+        <div className="flex flex-col">
+          <p
+            className="text-white
+          lg:text-[250%]  lg:ml-[70px]
+          md:text-[30px] 
+          sm:text-[30px] 
+          xs:text-[25px]
+          "
+          >
             Hi, My name is
           </p>
-          <p className="lg:text-[50px] text-white ml-[100px] md:text-[20px]  sm:text-[15px] ">
+          <p
+            className="text-white text-center
+           lg:text-[200%] lg:ml-[100px] 
+          md:text-[30px] 
+          sm:text-[30px] 
+          xs:text-[25px]
+          "
+          >
             <span className="text-[#fb0691]">{"{"}</span> .Abdallah Zaher{" "}
-            <span className="text-[#f60a90]">{"}"}</span>
+            <span className="text-[#5d0cdfbe]">{"}"}</span>
           </p>
-          <p className="lg:text-[30px] text-white ml-[70px] md:text-[20px]  sm:text-[10px]">
-            I&apos;am a {"< "}Full-Stack developer{"  />"}
+          <p
+            className="text-white 
+          lg:text-[20px] lg:ml-[70px] 
+          md:text-[30px]  
+          sm:text-[20px]
+          xs:text-[15px]
+          "
+          >
+            I&apos;am a <span className="text-[#fb0691]">{"< "}</span>Full-Stack
+            developer<span className="text-[#5d0cdfbe]">{" >"}</span>
           </p>
         </div>
-        <div className="lg:w-[50rem] lg:h-[35rem] md:w-[30rem] md:h-[20rem] ">
+        <div
+          className="
+        lg:w-[50%] lg:h-[35rem] 
+        md:w-[30rem] md:h-[30rem]
+        sm:w-[30rem] sm:h-[30rem]
+        xs:w-full xs:h-[30rem]
+        "
+        >
           <Canvas shadows flat linear>
             <Scene />
             <OrbitControls />
