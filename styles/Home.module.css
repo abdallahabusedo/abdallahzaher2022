@@ -52,9 +52,10 @@
 .text {
   text-transform: uppercase;
   font-family: "Unbounded", cursive;
-  font-size: 4em;
   font-weight: 700;
   color: #f5f5f5;
+  font-size: 4rem;
+  margin-bottom: 30px;
   text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
     1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
     1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
@@ -167,5 +168,35 @@
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/* XS */
+@media only screen and (min-width: 200px) {
+  .text {
+    font-size: 2em;
+  }
+}
+/* SM */
+@media only screen and (min-width: 640px) {
+  .text {
+    font-size: 2em;
+  }
+}
+/* MD */
+@media only screen and (min-width: 768px) {
+  .text {
+    font-size: 3em;
+  }
+}
+/* LG */
+@media only screen and (min-width: 1024px) {
+  .text {
+    font-size: 4em;
+  }
+}
+/* XL */
+@media only screen and (min-width: 1280px) {
+  .text {
+    font-size: 4em;
   }
 }
