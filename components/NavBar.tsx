@@ -5,7 +5,7 @@ import { MdWorkspacesFilled, MdContacts } from "react-icons/md";
 function NavBar() {
   let taps = [
     {
-      name: "Home",
+      name: "About me",
       link: "/",
       icon: <AiFillHome />,
     },
@@ -20,8 +20,8 @@ function NavBar() {
       icon: <AiFillProject />,
     },
     {
-      name: "Contact",
-      link: "#",
+      name: "Contact Me",
+      link: "/contacts",
       icon: <MdContacts />,
     },
   ];
