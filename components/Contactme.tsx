@@ -3,19 +3,29 @@ import styles from "./../styles/Home.module.css";
 import NavBar from "./NavBar";
 import profilePic from "./../assets/profile-pic.png";
 import Image from "next/image";
-import facebook from "./../assets/facebook.png";
 import instagram from "./../assets/instagram.png";
-import twitter from "./../assets/twitter.png";
 import linkedin from "./../assets/linkedin.png";
 import github from "./../assets/github.png";
 import Link from "next/link";
 function Contactme() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
   return (
-    <div className={`${styles.Welcome} h-[100vh] text-white `}>
+    <div
+      className={`${styles.Welcome} lg:h-[100vh] md:h-[100vh] text-white sm:pb-8  xs:pb-8`}
+    >
       <NavBar />
-      <div className="flex justify-center items-center gap-60 mt-20">
+      <div
+        className="flex  justify-center items-center
+      lg:flex-row lg:gap-60 lg:mt-20
+      md:flex-row md:gap-40 md:mt-20
+      sm:flex-col sm:gap-20
+      xs:flex-col xs:gap-10
+    "
+      >
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="lg:w-[350px] ">
+          <div className="lg:w-[350px] md:w-[300px] sm:w-[300px] xs:w-[300px]">
             <Image src={profilePic} alt="profile pic" />
           </div>
           <button
@@ -38,6 +48,7 @@ function Contactme() {
             <label htmlFor="">Your Name</label>
             <input
               type="text"
+              onChange={(e) => setName(e.target.value)}
               name="name"
               placeholder="Your Name"
               className="text-black px-4 py-2 rounded-3xl"
@@ -46,6 +57,7 @@ function Contactme() {
             <label htmlFor="">Your Email</label>
             <input
               type="email"
+              onChange={(e) => setEmail(e.target.value)}
               name="email"
               placeholder="Email"
               className="text-black px-4 py-2 rounded-3xl"
@@ -54,9 +66,15 @@ function Contactme() {
             <label htmlFor="">Your Message</label>
             <textarea
               name="message"
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
               className="text-black px-4 py-2 rounded-3xl"
             />
+            <a
+              href={`mailto:abdallahsedo@hotmail.com?subject='Hello from ${name}!'&body="${message}\n from ${email}"`}
+            >
+              Let's talk
+            </a>
           </form>
           <div className="flex justify-center items-center ">
             {/* <Link href="https://www.facebook.com/abdallah.abusedo">
