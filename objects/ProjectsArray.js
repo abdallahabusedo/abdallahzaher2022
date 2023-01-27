@@ -8,14 +8,12 @@ import js from "./../assets/javascript-logo.png";
 import ts from "./../assets/typescript.png";
 import react from "./../assets/react.png";
 import bootstrap from "./../assets/bootstrap-framework-logo.png";
-import python from "./../assets/python-language-logo.png";
 import next from "./../assets/Next.js.png";
 import cc from "./../assets/cdnlogo.com_c-sharp.png";
 import jest from "./../assets/jest.png";
 import tailwind from "./../assets/tailwind-css.png";
 import express from "./../assets/express.png";
 import node from "./../assets/nodejs.png";
-import graphql from "./../assets/graphql.png";
 import prisma from "./../assets/prisma.png";
 import nestjs from "./../assets/nestjs.png";
 import oud from "./../assets/oud.png";
@@ -91,7 +89,7 @@ export const ProjectsArray = [
       { name: "CSS", icon: css },
       { name: "typescript", icon: ts },
     ],
-    animation: "fade-up-right",
+    animation: "fade-right",
   },
   {
     name: "InstaSedo",
@@ -125,7 +123,7 @@ export const ProjectsArray = [
         icon: firebase,
       },
     ],
-    animation: "fade-up-left",
+    animation: "fade-left",
   },
   {
     name: "CalenderJs",
@@ -143,7 +141,7 @@ export const ProjectsArray = [
         icon: tailwind,
       },
     ],
-    animation: "fade-down-right",
+    animation: "fade-right",
   },
   {
     name: "Oud",
@@ -170,7 +168,7 @@ export const ProjectsArray = [
       },
       { name: "Css", icon: css },
     ],
-    animation: "fade-down-left",
+    animation: "fade-left",
   },
   {
     name: "Level up",
@@ -196,7 +194,7 @@ export const ProjectsArray = [
         icon: node,
       },
     ],
-    animation: "flip-left",
+    animation: "fade-right",
   },
   {
     name: "Pacman",
@@ -216,7 +214,7 @@ export const ProjectsArray = [
         icon: cc,
       },
     ],
-    animation: "flip-right",
+    animation: "fade-left",
   },
   {
     name: "Blog site",
@@ -238,7 +236,7 @@ export const ProjectsArray = [
         icon: mongodb,
       },
     ],
-    animation: "flip-up",
+    animation: "fade-right",
   },
   {
     name: "covid19 visualization",
@@ -252,7 +250,7 @@ export const ProjectsArray = [
         icon: vue,
       },
     ],
-    animation: "flip-down",
+    animation: "fade-left",
   },
   {
     name: "Blog site (just Back-End)",
@@ -270,6 +268,6 @@ export const ProjectsArray = [
         icon: prisma,
       },
     ],
-    animation: "zoom-in",
+    animation: "fade-right",
   },
 ];
