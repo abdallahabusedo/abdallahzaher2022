@@ -74,7 +74,7 @@ function Contactme() {
             className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl"
               href={`mailto:abdallahsedo@hotmail.com?subject='Hello from ${name}!'&body="${message}\n from ${email}"`}
             >
-              Let's talk
+              Let&apos;s talk
             </a>
           </form>
           <div className="flex justify-center items-center ">
