@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import styles from "../styles/Home.module.css";
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import NavBar from "./NavBar";
 import Scene from "./Room";
+import Loader from "./Loader";
 function WelcomeComp() {
   React.useEffect(() => {
     AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
@@ -15,7 +16,7 @@ function WelcomeComp() {
       <NavBar />
       <div
         data-aos="fade-up"
-        className="flex 
+        className="flex
       lg:flex-row lg:items-center lg:justify-center  
       md:flex-col md:justify-center md:items-center md:text-left
       sm:flex-col sm:justify-center sm:items-center 
@@ -64,10 +65,14 @@ function WelcomeComp() {
         xs:w-full xs:h-[30rem]
         "
         >
-          <Canvas shadows flat linear>
-            <Scene />
-            <OrbitControls />
-          </Canvas>
+          <div className="flex justify-center items-center h-full ">
+            <Suspense fallback={<Loader />}>
+              <Canvas shadows flat linear>
+                <Scene />
+                <OrbitControls />
+              </Canvas>
+            </Suspense>
+          </div>
         </div>
       </div>
     </div>
