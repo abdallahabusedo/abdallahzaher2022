@@ -100,20 +100,7 @@
   text-align: justify;
   transition: all 0.3s ease-out;
 }
-.projectName {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-}
-.projectDescription {
-  color: white;
-}
-.projectDescription,
-.projectName {
-  transition: all 0.3s ease-out;
-  opacity: var(--active);
-}
+
 
 .nav {
   color: white;

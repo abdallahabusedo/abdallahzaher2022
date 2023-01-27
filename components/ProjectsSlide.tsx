@@ -36,10 +36,10 @@ function ProjectsSlide() {
       >
         <NavBar />
       </div>
-      <span className={`${styles.text} mt-40`}>
+      <span className={`${styles.text} lg:mt-40 md:mt-30 sm:mt-20 xs:mt-20`}>
         {"{"} .Projects {"}"}
       </span>
-      <div className="flex flex-col items-center justify-center gap-8 mb-10">
+      <div className="flex flex-col items-center justify-center gap-8 mb-10 max-w-[100vw]">
         {ProjectsArray.slice(0, next).map((project: any, i: number) => {
           return (
             <div
@@ -51,11 +51,11 @@ function ProjectsSlide() {
                 <Image
                   src={project.image}
                   alt=""
-                  className="rounded-xl lg:w-[500px]"
+                  className="rounded-xl lg:w-[500px] md:w-[400px] sm:w-[300px] xs:w-[200px]"
                 />
-                <div>
+                <div className="flex flex-col justify-center items-center">
                   <h2
-                    className={`${styles.projectName} hover:underline transition-all duration-200 ease-in-out`}
+                    className={`text-white font-bold py-2 underline hover:underline transition-all duration-200 ease-in-out`}
                   >
                     <a
                       href={project.link}
@@ -64,24 +64,36 @@ function ProjectsSlide() {
                       {project.name}
                     </a>
                   </h2>
-                  <div className="flex gap-2 justify-center items-center text-white rounded-full ">
+                  <div
+                    className={`grid ${
+                      project.badges.length === 1
+                        ? "lg:grid-cols-1"
+                        : project.badges.length === 2
+                        ? "lg:grid-cols-2"
+                        : project.badges.length === 3
+                        ? "lg:grid-cols-3"
+                        : "lg:grid-cols-4"
+                    }  gap-2 justify-center items-center text-white rounded-full  md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-2`}
+                  >
                     {project.badges.map((bad: any, y: number) => {
                       return (
                         <span
                           key={y}
-                          className={`${styles.glassEffect}  rounded-full  flex justify-center items-center px-2 gap-2 hover:bg-[#f8f8f823] transition-all duration-200 ease-in-out `}
+                          className={`${styles.glassEffect} rounded-full  flex justify-center items-center px-2 gap-2 hover:bg-[#f8f8f823] transition-all duration-200 ease-in-out `}
                         >
                           <Image
                             src={bad.icon}
                             alt={bad.name}
                             className="w-[1.3rem] py-[0.25rem]"
                           />
-                          <div>{bad.name} </div>
+                          <div>
+                            <p className="text-[8px]">{bad.name} </p>
+                          </div>
                         </span>
                       );
                     })}
                   </div>
-                  <p className={styles.projectDescription}>
+                  <p className="text-white lg:text-[24px] md:text-[18px] sm:text-[12px] xs:text-[12px] text-left py-4 border-t-2 mt-4">
                     {project.description}
                   </p>
                 </div>
@@ -92,7 +104,7 @@ function ProjectsSlide() {
         <div className={ProjectsArray.length === next ? "hidden" : ""}>
           <button
             className="text-white border p-4 rounded-md"
-            onClick={() => setNext((prev: any) => prev + 1)}
+            onClick={() => setNext((prev: any) => prev + 2)}
           >
             Load More
           </button>
