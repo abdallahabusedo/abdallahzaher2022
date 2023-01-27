@@ -7,7 +7,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: hidden;
   overflow-x: hidden;
 }
 * {
@@ -23,8 +25,6 @@ body {
 body::-webkit-scrollbar {
   width: 0em;
 }
-
-
 
 svg {
   overflow: visible;
