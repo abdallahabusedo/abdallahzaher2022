@@ -71,6 +71,7 @@ function Contactme() {
               className="text-black px-4 py-2 rounded-3xl"
             />
             <a
+            className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl"
               href={`mailto:abdallahsedo@hotmail.com?subject='Hello from ${name}!'&body="${message}\n from ${email}"`}
             >
               Let's talk
