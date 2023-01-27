@@ -53,7 +53,7 @@ function WelcomeComp() {
           xs:text-[15px]
           "
           >
-            I&apos;am a <span className="text-[#fb0691]">{"< "}</span>Full-Stack
+            I am a <span className="text-[#fb0691]">{"< "}</span>Full-Stack
             developer<span className="text-[#5d0cdfbe]">{" >"}</span>
           </p>
         </div>
