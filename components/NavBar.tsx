@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { AiFillHome, AiFillProject } from "react-icons/ai";
 import { MdWorkspacesFilled, MdContacts } from "react-icons/md";
 function NavBar() {
+  const router = useRouter();
   let taps = [
     {
       name: "About me",
@@ -37,13 +39,15 @@ function NavBar() {
       <div className="flex flex-row justify-center items-center lg:gap-8 md:gap-4 sm:gap-4 xs:gap-4">
         {taps.map((tap, i) => {
           return (
-            <Link
+            <button
               key={i}
-              href={tap.link}
-              className="flex flex-col justify-center items-center rounded-xl"
+              className="hover:underline p-2"
+              onClick={() => {
+                router.push(tap.link);
+              }}
             >
               .{tap.name}
-            </Link>
+            </button>
           );
         })}
       </div>

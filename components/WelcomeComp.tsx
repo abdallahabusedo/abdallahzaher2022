@@ -8,9 +8,12 @@ import NavBar from "./NavBar";
 import Scene from "./Room";
 import Loader from "./Loader";
 function WelcomeComp() {
+  const [isMobile, setIsMobile] = React.useState(false);
   React.useEffect(() => {
     AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
+    window.innerWidth > 700 ? setIsMobile(true) : setIsMobile(false);
   }, []);
+
   return (
     <div className={`${styles.Welcome} h-[100vh]`}>
       <NavBar />
@@ -69,7 +72,7 @@ function WelcomeComp() {
             <Suspense fallback={<Loader />}>
               <Canvas shadows flat linear>
                 <Scene />
-                <OrbitControls />
+                <OrbitControls enableZoom={isMobile ? false : true} />
               </Canvas>
             </Suspense>
           </div>
