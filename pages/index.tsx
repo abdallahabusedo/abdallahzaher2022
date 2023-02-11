@@ -1,18 +1,17 @@
-import Cursor from "../components/Cursor";
 import WelcomeComp from "../components/WelcomeComp";
 import ErrorBoundary from "../ErrorBoundary";
 import React from "react";
+import Skills from "./skills/index";
+import Projects from "./projects/index";
+import Contacts from "./contacts/index";
 export default function Home() {
-  const [isMobile, setIsMobile] = React.useState(false);
-  React.useEffect(() => {
-    window.innerWidth > 700 ? setIsMobile(true) : setIsMobile(false);
-  }, []);
+
   return (
     <ErrorBoundary>
-      <div>
-        {isMobile ? <Cursor /> : <></>}
-        <WelcomeComp />
-      </div>
+      <WelcomeComp />
+      <Skills />
+      <Projects />
+      <Contacts />
     </ErrorBoundary>
   );
 }

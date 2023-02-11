@@ -8,22 +8,22 @@ function NavBar() {
   let taps = [
     {
       name: "About me",
-      link: "/",
+      link: "#",
       icon: <AiFillHome />,
     },
     {
       name: "Skills",
-      link: "/skills",
+      link: "#skills",
       icon: <MdWorkspacesFilled />,
     },
     {
       name: "Projects",
-      link: "/projects",
+      link: "#projects",
       icon: <AiFillProject />,
     },
     {
       name: "Contact Me",
-      link: "/contacts",
+      link: "#contacts",
       icon: <MdContacts />,
     },
   ];

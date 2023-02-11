@@ -19,7 +19,7 @@ function WelcomeComp() {
       <NavBar />
       <div
         data-aos="fade-up"
-        className="flex
+        className="flex h-[80vh]
       lg:flex-row lg:items-center lg:justify-center  
       md:flex-col md:justify-center md:items-center md:text-left
       sm:flex-col sm:justify-center sm:items-center 
@@ -29,7 +29,8 @@ function WelcomeComp() {
         <div className="flex flex-col">
           <p
             className="text-white
-          lg:text-[250%]  lg:ml-[70px]
+          xl:text-[300%]
+          lg:text-[250%] lg:ml-[70px]
           md:text-[30px] 
           sm:text-[30px] 
           xs:text-[25px]

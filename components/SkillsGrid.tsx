@@ -121,9 +121,8 @@ function SkillsGrid() {
   return (
     <div
       id="skills"
-      className={`${styles.Welcome} h-[100vh] flex flex-col items-center  `}
+      className={`${styles.Welcome} flex flex-col items-center`}
     >
-      <NavBar />
       <span className={`${styles.text}`}>
         {"{"} .Skills {"}"}
       </span>
@@ -155,6 +154,7 @@ function SkillsGrid() {
                 <Image
                   src={sk.icon}
                   alt="express"
+                  width={60}
                   className="
                   lg:max-w-[60px]
                   md:max-w-[50px]

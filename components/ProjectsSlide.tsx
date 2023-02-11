@@ -27,15 +27,9 @@ function ProjectsSlide() {
   }, []);
   return (
     <div
+      id="projects"
       className={`${styles.Welcome} flex flex-col justify-center items-center`}
     >
-      <div
-        className={` ${
-          navbar ? styles.glassEffect : ""
-        } fixed top-0 z-10 w-full transition-all duration-500 ease-in-out `}
-      >
-        <NavBar />
-      </div>
       <span className={`${styles.text} lg:mt-40 md:mt-30 sm:mt-20 xs:mt-20`}>
         {"{"} .Projects {"}"}
       </span>

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./../styles/Home.module.css";
-import NavBar from "./NavBar";
 import profilePic from "./../assets/profile-pic.png";
 import Image from "next/image";
 import instagram from "./../assets/instagram.png";
@@ -13,13 +12,13 @@ function Contactme() {
   const [message, setMessage] = React.useState("");
   return (
     <div
-      className={`${styles.Welcome} lg:h-[100vh] md:h-[100vh] text-white sm:pb-8  xs:pb-8`}
+      id="contacts"
+      className={`${styles.Welcome}  text-white sm:pb-8  xs:pb-8`}
     >
-      <NavBar />
       <div
         className="flex  justify-center items-center
-      lg:flex-row lg:gap-60 lg:mt-20
-      md:flex-row md:gap-40 md:mt-20
+      lg:flex-row lg:gap-60 lg:pt-20
+      md:flex-row md:gap-40 md:pt-20
       sm:flex-col sm:gap-20
       xs:flex-col xs:gap-10
     "

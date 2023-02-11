@@ -25,7 +25,26 @@ import blogsite from "./../assets/blogsite.png";
 import instaSedo from "./../assets/instasedo.png";
 import CalenderJS from "./../assets/CalenderJs.png";
 import covid from "./../assets/covid.png";
+import dashboard from "./../assets/dashboard.png";
 export const ProjectsArray = [
+  {
+    name: "Ultimate Dashboard",
+    description:
+      "Ultimate Dashboard is a dashboard that includes tables, bar chart, pie chart,geography chart and line chart.",
+    image: dashboard,
+    link: "https://ultimate-dashboard.vercel.app/",
+    badges: [
+      {
+        name: "Next JS",
+        icon: next,
+      },
+      {
+        name: "Tailwind",
+        icon: tailwind,
+      },
+    ],
+    animation: "fade-left",
+  },
   {
     name: "Posidoon Chat",
     description:
