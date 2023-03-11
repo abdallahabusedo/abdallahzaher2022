@@ -19,8 +19,9 @@ import tailwind from "./../assets/tailwind-css.png";
 import express from "./../assets/express.png";
 import node from "./../assets/nodejs.png";
 import graphql from "./../assets/graphql.png";
-import NavBar from "./NavBar";
 import AOS from "aos";
+import Threejs from "./../assets/threejs.svg";
+import spline from "./../assets/spline.png";
 import "aos/dist/aos.css";
 function SkillsGrid() {
   React.useEffect(() => {
@@ -117,12 +118,24 @@ function SkillsGrid() {
       icon: graphql,
       delay: 1800,
     },
+    {
+      name: "Threejs",
+      icon: Threejs,
+      delay: 1900,
+    },
+    {
+      name: "R3F",
+      icon: react,
+      delay: 2000,
+    },
+    {
+      name: "Spline",
+      icon: spline,
+      delay: 2100,
+    },
   ];
   return (
-    <div
-      id="skills"
-      className={`${styles.Welcome} flex flex-col items-center`}
-    >
+    <div id="skills" className={`${styles.Welcome} flex flex-col items-center`}>
       <span className={`${styles.text}`}>
         {"{"} .Skills {"}"}
       </span>
@@ -142,7 +155,7 @@ function SkillsGrid() {
               data-aos="fade-up"
               data-aos-delay={sk.delay}
               key={i}
-              className={`flex flex-col justify-center items-center
+              className={`flex flex-col justify-center items-center gap-2
               hover:bg-[#290e56] rounded-full transition-all duration-1000 ease-in-out group
               lg:max-w-[120px] lg:min-w-[120px] lg:min-h-[120px]
               md:max-w-[100px] md:min-w-[100px] md:min-h-[100px]

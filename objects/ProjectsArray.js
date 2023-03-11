@@ -26,7 +26,48 @@ import instaSedo from "./../assets/instasedo.png";
 import CalenderJS from "./../assets/CalenderJs.png";
 import covid from "./../assets/covid.png";
 import dashboard from "./../assets/dashboard.png";
+import carStore from "./../assets/carstore.gif";
+import Threejs from "./../assets/threejs.svg";
+
 export const ProjectsArray = [
+  {
+    name: "R3F Car Store",
+    description:
+      "3D Car Store visualization using threejs and React 3 Fiber with NextJs framework",
+    image: carStore,
+    link: "https://github.com/abdallahabusedo/car_store",
+    badges: [
+      {
+        name: "Next JS",
+        icon: next,
+      },
+      {
+        name: "Tailwind",
+        icon: tailwind,
+      },
+      {
+        name: "CSS",
+        icon: css,
+      },
+      {
+        name: "Threejs",
+        icon: Threejs,
+      },
+      {
+        name: "R3F",
+        icon: react,
+      },
+      {
+        name: "Javascript",
+        icon: js,
+      },
+      {
+        name: "TypeScript",
+        icon: ts,
+      },
+    ],
+    animation: "fade-right",
+  },
   {
     name: "Ultimate Dashboard",
     description:
