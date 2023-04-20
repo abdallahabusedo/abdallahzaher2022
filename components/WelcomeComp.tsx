@@ -73,13 +73,7 @@ function WelcomeComp() {
             <Suspense fallback={<Loader />}>
               <Canvas shadows flat linear>
                 <Scene />
-                <OrbitControls
-                  enableZoom={isMobile ? false : true}
-                  autoRotate={true}
-                  autoRotateSpeed={10}
-                  maxZoom={0.8}
-                  minZoom={0.5}
-                />
+                <OrbitControls enableZoom={isMobile ? false : true} />
               </Canvas>
             </Suspense>
           </div>

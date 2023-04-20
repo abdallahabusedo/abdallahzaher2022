@@ -4,24 +4,10 @@ import Image from "next/image";
 import "@splidejs/react-splide/css/sea-green";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import NavBar from "./NavBar";
 import { ProjectsArray } from "././../objects/ProjectsArray";
+
 function ProjectsSlide() {
-  const [navbar, setNavbar] = React.useState(false);
   const [next, setNext] = React.useState(5);
-  //navbar scroll changeBackground function
-  const changeBackground = () => {
-    if (window.scrollY >= 66) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-  React.useEffect(() => {
-    changeBackground();
-    // adding the event when scroll change background
-    window.addEventListener("scroll", changeBackground);
-  });
   React.useEffect(() => {
     AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
   }, []);
