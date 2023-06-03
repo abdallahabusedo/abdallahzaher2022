@@ -91,7 +91,9 @@ svg path {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  z-index: 1;
+  z-index: 10;
+  background-color: #000;
+  transition: all 500ms ease-in-out;
 }
 
 /* hover menu with pictures **********************************/
@@ -160,6 +162,7 @@ svg path {
   -webkit-text-stroke: 1px var(--pr-color);
   z-index: 2;
   transition: 0.8s var(--cubicbz);
+  cursor: pointer;
 }
 
 .menu__item:hover .menu__link {
@@ -171,4 +174,27 @@ svg path {
 .menu__item:hover::before {
   opacity: 1;
   transform: translate(0%, -50%) rotate(180deg);
+}
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
