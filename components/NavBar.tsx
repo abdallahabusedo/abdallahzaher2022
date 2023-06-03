@@ -50,6 +50,7 @@ function NavBar() {
               {taps.map((tap: any, index: number) => {
                 return (
                   <li
+                    key={index}
                     className="menu__item"
                     data-id={index + 1}
                     onClick={closeMenu}
