@@ -3,8 +3,12 @@ import "aos/dist/aos.css";
 import React from "react";
 import styles from "./../styles/Home.module.css";
 import { ProjectsArray } from "././../objects/ProjectsArray";
-import CarouselComp from "./partials/Carousel";
+// import CarouselComp from "./partials/Carousel";
 import ProjectCard from "./partials/ProjectCard";
+import dynamic from "next/dynamic";
+const CarouselComp = dynamic(() => import("./partials/Carousel"), {
+  ssr: false,
+});
 function ProjectsSlide() {
   const [cards, setCards] = React.useState<any>([]);
   React.useEffect(() => {
@@ -16,12 +20,11 @@ function ProjectsSlide() {
   return (
     <div
       id="projects"
-      className={`${styles.Welcome} flex flex-col gap-10 justify-center items-center`}
+      className={`${styles.Welcome} flex flex-col gap-10 pb-10 justify-center items-center`}
     >
       <span className={`${styles.text} lg:mt-40 md:mt-30 sm:mt-20 xs:mt-20`}>
         {"{"} .Projects {"}"}
       </span>
-      {/* <div className="w-full my-10 h-full"> */}
       <CarouselComp
         cards={cards}
         height="500px"
@@ -29,7 +32,6 @@ function ProjectsSlide() {
         offset={2}
         showArrows={false}
       />
-      {/* </div> */}
     </div>
   );
 }
