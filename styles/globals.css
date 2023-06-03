@@ -24,30 +24,104 @@ body::-webkit-scrollbar {
   width: 0em;
 }
 
-svg {
-  overflow: visible;
-  width: 100px;
-  height: 150px;
+.loader {
+  width: 48px;
+  height: 48px;
+  position: relative;
 }
-svg g {
-  animation: slide 2s linear infinite;
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48em;
+  height: 48em;
+  background-image: radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0),
+    radial-gradient(circle 10px, #fff 100%, transparent 0);
+  background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em, 13em -13em,
+    -13em -13em, 13em 13em, -13em 13em;
+  background-repeat: no-repeat;
+  font-size: 0.5px;
+  border-radius: 50%;
+  animation: blast 1s ease-in infinite;
 }
-svg g:nth-child(2) {
-  animation-delay: 0.5s;
+.loader::after {
+  font-size: 1px;
+  background: #fff;
+  animation: bounce 1s ease-in infinite;
 }
-svg g:nth-child(2) path {
-  animation-delay: 0.5s;
-  stroke-dasharray: 0px 158px;
-  stroke-dashoffset: 1px;
+
+@keyframes bounce {
+  0%,
+  100% {
+    font-size: 0.75px;
+  }
+  50% {
+    font-size: 1.5px;
+  }
 }
-svg path {
-  stroke: url(#gradient);
-  stroke-width: 20px;
-  stroke-linecap: round;
-  fill: none;
-  stroke-dasharray: 0 157px;
-  stroke-dashoffset: 0;
-  animation: escalade 2s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+@keyframes blast {
+  0%,
+  40% {
+    font-size: 0.5px;
+  }
+  70% {
+    opacity: 1;
+    font-size: 4px;
+  }
+  100% {
+    font-size: 6px;
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #ff3d00;
+  }
+  50% {
+    box-shadow: 0 0 0 #ff3d00;
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #ff3d00;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 0 #fff;
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #fff;
+    margin-top: 0;
+  }
 }
 
 @keyframes slide {
