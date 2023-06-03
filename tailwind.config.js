@@ -22,6 +22,16 @@ module.exports = {
       xl: "1280px",
       // => @media (min-width: 1280px) {... }
     },
+    clipPath: {
+      main: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+      active: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+    },
+    textFillColor: (theme) => theme("borderColor"),
+    textStrokeColor: (theme) => theme("borderColor"),
+    textStrokeWidth: (theme) => theme("borderWidth"),
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-clip-path"),
+    require("tailwindcss-text-fill-stroke"),
+  ],
 };

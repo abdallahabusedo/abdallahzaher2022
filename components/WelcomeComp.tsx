@@ -15,7 +15,7 @@ function WelcomeComp() {
   }, []);
 
   return (
-    <div className={`${styles.Welcome} h-[100vh]`}>
+    <div className={`${styles.Welcome} h-[100vh] pt-24`}>
       <NavBar />
       <div
         data-aos="fade-up"
