@@ -40,7 +40,7 @@ function NavBar() {
           <div className="flex-1 px-10 py-5">
             <h1>Posidoon</h1>
           </div>
-          <div className="px-10 py-5">
+          <div className="px-10 py-5 ">
             <MenuIcon isOpen={isOpen} toggleMenu={toggleMenu} />
           </div>
         </div>
@@ -55,7 +55,10 @@ function NavBar() {
                     data-id={index + 1}
                     onClick={closeMenu}
                   >
-                    <a href={tap.link} className="menu__link">
+                    <a
+                      href={tap.link}
+                      className="menu__link  md:text-[58px] sm:text-[48px] xs:text-[30px]"
+                    >
                       {tap.name}
                     </a>
                   </li>
