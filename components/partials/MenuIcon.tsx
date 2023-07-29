@@ -11,7 +11,7 @@ const MenuIcon = (props: any) => {
         type="checkbox"
         id="check"
         className="hidden group-['checked'] cursor-pointer"
-        checked={props.isOpen}
+        // checked={props.isOpen}
         onClick={() => props.toggleMenu()}
       />
       <span

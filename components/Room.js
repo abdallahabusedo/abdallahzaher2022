@@ -2,53 +2,16 @@ import { OrthographicCamera } from "@react-three/drei";
 import { useFrame, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
+import React from "react";
 
 export default function Scene({ ...props }) {
-  const gltf = useLoader(GLTFLoader, "/static/fish/scene.gltf");
-
-  let mixer = null;
-  if (gltf.animations.length) {
-    mixer = new THREE.AnimationMixer(gltf.scene);
-    document.addEventListener("keydown", (event) => {
-      console.log(event.key);
-      let action = null;
-      switch (event.key) {
-        case "j":
-          action = mixer.clipAction(gltf.animations[1]);
-          action.setLoop(THREE.LoopOnce);
-          action.play();
-          break;
-        case "w":
-          action = mixer.clipAction(gltf.animations[2]);
-          action.setLoop(THREE.LoopOnce);
-          action.play();
-          break;
-        case "f":
-          action = mixer.clipAction(gltf.animations[6]);
-          action.setLoop(THREE.LoopOnce);
-          action.play();
-          break;
-        case "s":
-          action = mixer.clipAction(gltf.animations[9]);
-          action.setLoop(THREE.LoopOnce);
-          action.play();
-          break;
-        case "h":
-          action = mixer.clipAction(gltf.animations[10]);
-          action.setLoop(THREE.LoopOnce);
-          action.play();
-          break;
-        default:
-          action = mixer.clipAction(gltf.animations[0]);
-          action.play();
-          break;
-      }
-    });
-  }
-  useFrame((state, delta) => {
-    mixer?.update(delta);
+  const gltf = useLoader(GLTFLoader, "/static/Models/skull.glb");
+  const modelRef = React.useRef();
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.001;
+    }
   });
-
   return (
     <>
       <group {...props} dispose={null}>
@@ -64,17 +27,33 @@ export default function Scene({ ...props }) {
         >
           <directionalLight
             name="Default Directional Light"
-            intensity={0.99}
+            intensity={10}
             shadow-mapSize-width={1024}
             shadow-mapSize-height={1024}
             shadow-camera-near={-10000}
             shadow-camera-far={100000}
-            color="#dadada"
-            position={[850000, 1300000, 1000000]}
+            color="#fff"
+            position={[50, 13, 100]}
+          />
+          <directionalLight
+            name="Default Directional Light"
+            intensity={10}
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+            shadow-camera-near={-10000}
+            shadow-camera-far={100000}
+            color="#fff"
+            position={[-50, 13, 10]}
           />
         </OrthographicCamera>
-        <primitive object={gltf.scene} position={[0, -1.5, 0]} />
-        <ambientLight intensity={2} />
+        <primitive
+          ref={modelRef}
+          object={gltf.scene}
+          position={[0, 0, 0]}
+          scale={1.5}
+          rotation={[0, 45, 0]}
+        />
+        <ambientLight intensity={10} />
         <pointLight intensity={5} position={[0, 0, 5]} />
         <hemisphereLight name="Default Ambient Light" intensity={0.75} />
       </group>

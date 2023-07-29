@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
 
 .Welcome {
-  background-image: url("/bggg.jpg");
-  background-color: #cccccc;
+  background-image: url("/bg3.jpg");
+  background-color: #000;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   font-family: "Unbounded", cursive;
-  
 }
 
 .loader {
@@ -101,7 +100,6 @@
   text-align: justify;
   transition: all 0.3s ease-out;
 }
-
 
 .nav {
   color: white;

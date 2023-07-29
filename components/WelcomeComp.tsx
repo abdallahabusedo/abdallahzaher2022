@@ -71,7 +71,7 @@ function WelcomeComp() {
         >
           <div className="flex justify-center items-center h-full ">
             <Suspense fallback={<Loader />}>
-              <Canvas shadows flat linear>
+              <Canvas linear>
                 <Scene />
                 <OrbitControls enableZoom={isMobile ? false : true} />
               </Canvas>
