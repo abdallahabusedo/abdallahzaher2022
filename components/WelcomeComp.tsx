@@ -60,6 +60,19 @@ function WelcomeComp() {
             I am a <span className="text-[#fb0691]">{"< "}</span>Full-Stack
             developer<span className="text-[#5d0cdfbe]">{" >"}</span>
           </p>
+          <div className="flex justify-center items-center mt-8">
+            <button
+              className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl w-fit text-white"
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1m23jVtiNEulP9Q2uOhpg7uwT0PceGCFk/view?usp=sharing",
+                  "_blank"
+                )
+              }
+            >
+              Download My CV
+            </button>
+          </div>
         </div>
         <div
           className="
