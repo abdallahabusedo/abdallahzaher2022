@@ -24,14 +24,20 @@ function Contactme() {
     "
       >
         <div className="flex flex-col justify-center items-center gap-8">
-          <div className="lg:w-[350px] md:w-[300px] sm:w-[300px] xs:w-[300px]">
-            <Image src={profilePic} alt="profile pic" />
+          <div className="flex justify-center items-center lg:w-[350px] md:w-[300px] sm:w-[300px] xs:w-[300px]">
+            <Image
+              src={"/me.jpg"}
+              width={300}
+              height={300}
+              alt="profile pic"
+              className="w-[300px] h-[300px] object-top object-cover rounded-xl"
+            />
           </div>
           <button
             className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl"
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1yLejn5T6-SMN-X9v2YVoQsxtLY5n6j9t/view?usp=share_link",
+                "https://drive.google.com/file/d/1m23jVtiNEulP9Q2uOhpg7uwT0PceGCFk/view?usp=sharing",
                 "_blank"
               )
             }

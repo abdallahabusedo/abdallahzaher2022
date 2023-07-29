@@ -21,6 +21,10 @@ function NavBar() {
       link: "#projects",
     },
     {
+      name: "Youtube",
+      link: "#youtube",
+    },
+    {
       name: "Contact Me",
       link: "#contacts",
     },

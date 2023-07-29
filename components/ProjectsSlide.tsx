@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import { ProjectsArray } from "././../objects/ProjectsArray";
 
 function ProjectsSlide() {
-  const [next, setNext] = React.useState(5);
+  const [next, setNext] = React.useState(6);
   React.useEffect(() => {
     AOS.init({ duration: 1500, easing: "ease-in-out", debounceDelay: 50 });
   }, []);
@@ -19,13 +19,13 @@ function ProjectsSlide() {
       <span className={`${styles.text} lg:mt-40 md:mt-30 sm:mt-20 xs:mt-20`}>
         {"{"} .Projects {"}"}
       </span>
-      <div className="flex flex-col items-center justify-center gap-8 mb-10 max-w-[100vw]">
+      <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 gap-4 sm:grid-cols-1 xs:grid-cols-1 justify-items-center mb-10 mx-12">
         {ProjectsArray.slice(0, next).map((project: any, i: number) => {
           return (
             <div
               data-aos={project.animation}
               key={i}
-              className={`${styles.glassEffect} rounded-[10px] flex flex-col text-center justify-center items-center bg-[#290e56] w-2/3 p-8 `}
+              className={`${styles.glassEffect} rounded-[10px] flex flex-col text-center justify-center items-center bg-[#290e56] w-full p-8  `}
             >
               <div className="flex flex-col justify-center items-center">
                 <Image
@@ -81,23 +81,23 @@ function ProjectsSlide() {
             </div>
           );
         })}
-        <div className="flex justify-center items-center gap-8">
-          <div className={ProjectsArray.length === next ? "hidden" : ""}>
-            <button
-              className="text-white border p-4 rounded-md transition-all duration-400 ease-in-out hover:rounded-full hover:bg-white hover:text-black"
-              onClick={() => setNext((prev: any) => prev + 2)}
-            >
-              Load More
-            </button>
-          </div>
-          <div className={next < 6 ? "hidden" : ""}>
-            <button
-              className="text-white border p-4 rounded-md transition-all duration-400 ease-in-out hover:rounded-full hover:bg-white hover:text-black"
-              onClick={() => setNext((prev: any) => prev - 2)}
-            >
-              Load Less
-            </button>
-          </div>
+      </div>
+      <div className="flex justify-center items-center gap-8 mb-8">
+        <div className={ProjectsArray.length === next ? "hidden" : ""}>
+          <button
+            className="text-white border p-4 rounded-md transition-all duration-400 ease-in-out hover:rounded-full hover:bg-white hover:text-black"
+            onClick={() => setNext((prev: any) => prev + 2)}
+          >
+            Load More
+          </button>
+        </div>
+        <div className={next < 7 ? "hidden" : ""}>
+          <button
+            className="text-white border p-4 rounded-md transition-all duration-400 ease-in-out hover:rounded-full hover:bg-white hover:text-black"
+            onClick={() => setNext((prev: any) => prev - 2)}
+          >
+            Load Less
+          </button>
         </div>
       </div>
     </div>
