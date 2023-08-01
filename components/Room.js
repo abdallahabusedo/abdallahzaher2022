@@ -12,6 +12,14 @@ export default function Scene({ ...props }) {
       modelRef.current.rotation.y += 0.001;
     }
   });
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    window.innerWidth > 700 ? setIsMobile(true) : setIsMobile(false);
+
+    // window.innerWidth > 700
+    //   ? modelRef.current.scale.set(1)
+    //   : modelRef.current.scale.set(1.5);
+  }, []);
   return (
     <>
       <group {...props} dispose={null}>
@@ -50,7 +58,7 @@ export default function Scene({ ...props }) {
           ref={modelRef}
           object={gltf.scene}
           position={[0, 0, 0]}
-          scale={1.5}
+          scale={1}
           rotation={[0, 45, 0]}
         />
         <ambientLight intensity={10} />
