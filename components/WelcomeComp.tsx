@@ -16,6 +16,10 @@ function WelcomeComp() {
 
   return (
     <div className={`${styles.Welcome} h-[100vh] pt-28`}>
+      <div className="fixed top-0 z-50 flex items-center justify-center w-full bg-white">
+        New Website is under construction 🚧 the current one is 2022 version
+      </div>
+
       <NavBar />
       <div
         data-aos="fade-up"
@@ -60,12 +64,12 @@ function WelcomeComp() {
             I am a <span className="text-[#fb0691]">{"< "}</span>Full-Stack
             developer<span className="text-[#5d0cdfbe]">{" >"}</span>
           </p>
-          <div className="flex justify-center items-center mt-8">
+          <div className="flex items-center justify-center mt-8">
             <button
-              className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl w-fit text-white"
+              className="p-2 text-white transition-all duration-300 ease-in-out border hover:rounded-3xl w-fit"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1m23jVtiNEulP9Q2uOhpg7uwT0PceGCFk/view?usp=sharing",
+                  "https://drive.google.com/file/d/1yL37a2MrCc5QozuHVblNiTWL51Nxbg_W/view?usp=sharing",
                   "_blank"
                 )
               }
@@ -82,7 +86,7 @@ function WelcomeComp() {
         xs:w-full xs:h-[30rem]
         "
         >
-          <div className="flex justify-center items-center h-full ">
+          <div className="flex items-center justify-center h-full ">
             <Suspense fallback={<Loader />}>
               <Canvas linear>
                 <Scene />

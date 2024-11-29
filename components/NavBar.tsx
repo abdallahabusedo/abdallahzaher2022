@@ -40,7 +40,7 @@ function NavBar() {
     "
     >
       <div className="">
-        <div className="flex justify-start w-full h-24 items-center fixed top-0 z-30">
+        <div className="fixed top-0 z-30 flex items-center justify-start w-full h-24">
           <div className="flex-1 px-10 py-5">
             <h1>Posidoon</h1>
           </div>
@@ -49,7 +49,7 @@ function NavBar() {
           </div>
         </div>
         {isOpen && (
-          <div className="wrapp animate ease-in-out">
+          <div className="ease-in-out wrapp animate">
             <ul className="menu">
               {taps.map((tap: any, index: number) => {
                 return (

@@ -15,15 +15,8 @@ function Contactme() {
       id="contacts"
       className={`${styles.Welcome}  text-white sm:pb-8  xs:pb-8`}
     >
-      <div
-        className="flex  justify-center items-center
-      lg:flex-row lg:gap-60 lg:pt-20
-      md:flex-row md:gap-40 md:pt-20
-      sm:flex-col sm:gap-20
-      xs:flex-col xs:gap-10
-    "
-      >
-        <div className="flex flex-col justify-center items-center gap-8">
+      <div className="flex items-center justify-center lg:flex-row lg:gap-60 lg:pt-20 md:flex-row md:gap-40 md:pt-20 sm:flex-col sm:gap-20 xs:flex-col xs:gap-10 ">
+        <div className="flex flex-col items-center justify-center gap-8">
           <div className="flex justify-center items-center lg:w-[350px] md:w-[300px] sm:w-[300px] xs:w-[300px]">
             <Image
               src={"/me.jpg"}
@@ -34,10 +27,10 @@ function Contactme() {
             />
           </div>
           <button
-            className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl"
+            className="p-2 transition-all duration-300 ease-in-out border hover:rounded-3xl"
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1m23jVtiNEulP9Q2uOhpg7uwT0PceGCFk/view?usp=sharing",
+                "https://drive.google.com/file/d/1yL37a2MrCc5QozuHVblNiTWL51Nxbg_W/view?usp=sharing",
                 "_blank"
               )
             }
@@ -45,10 +38,10 @@ function Contactme() {
             Download My CV
           </button>
         </div>
-        <div className="flex flex-col justify-center items-center  gap-4">
-          <form
+        <div className="flex flex-col items-center justify-center gap-4">
+          {/* <form
             action=""
-            className="flex flex-col justify-start items-center h-full gap-4"
+            className="flex flex-col items-center justify-start h-full gap-4"
           >
             <label htmlFor="">Your Name</label>
             <input
@@ -56,7 +49,7 @@ function Contactme() {
               onChange={(e) => setName(e.target.value)}
               name="name"
               placeholder="Your Name"
-              className="text-black px-4 py-2 rounded-3xl"
+              className="px-4 py-2 text-black rounded-3xl"
             />
 
             <label htmlFor="">Your Email</label>
@@ -65,7 +58,7 @@ function Contactme() {
               onChange={(e) => setEmail(e.target.value)}
               name="email"
               placeholder="Email"
-              className="text-black px-4 py-2 rounded-3xl"
+              className="px-4 py-2 text-black rounded-3xl"
             />
 
             <label htmlFor="">Your Message</label>
@@ -73,16 +66,19 @@ function Contactme() {
               name="message"
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Message"
-              className="text-black px-4 py-2 rounded-3xl"
+              className="px-4 py-2 text-black rounded-3xl"
             />
             <a
-              className="border p-2 transition-all duration-300 ease-in-out hover:rounded-3xl"
+              className="p-2 transition-all duration-300 ease-in-out border hover:rounded-3xl"
               href={`mailto:abdallahsedo@hotmail.com?subject='Hello from ${name}!'&body="${message}\n from ${email}"`}
             >
               Let&apos;s talk
             </a>
-          </form>
-          <div className="flex justify-center items-center ">
+          </form> */}
+          <a href="mailto:abdallahabusedo@gmail.com">
+            Email: abdallahabusedo@gmail.com
+          </a>
+          <div className="flex items-center justify-center ">
             {/* <Link href="https://www.facebook.com/abdallah.abusedo">
               <Image src={facebook} alt="Social" width={100} />
             </Link> */}
